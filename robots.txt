@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: haha/sitemap.xml
+Sitemap: https://gigimushroom.github.io/sitemap.xml
