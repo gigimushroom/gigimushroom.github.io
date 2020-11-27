@@ -32,5 +32,59 @@ Projects Regular Expression Engine  Define context free grammar. Implement a LR 
       <description></description>
     </item>
     
+    <item>
+      <title>Arts Week 5</title>
+      <link>https://gigimushroom.github.io/post/arts_week5/</link>
+      <pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gigimushroom.github.io/post/arts_week5/</guid>
+      <description>Review: Hacker and Painters Chapter 15 Design and Research 作者几个鲜明的观点： 设计不需要崭新，但是需要好。研究不需要好，但是必须是崭新。然后真正最优秀的设计和研究其实最终的路还是会</description>
+    </item>
+    
+    <item>
+      <title>Arts Week 4</title>
+      <link>https://gigimushroom.github.io/post/arts_week4/</link>
+      <pubDate>Wed, 30 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gigimushroom.github.io/post/arts_week4/</guid>
+      <description>Algorithm Largest Number At Least Twice of Others 解法粗暴：第一次循环找到最大 第二次循环找是否满足twice条件 Review: 阅读了refactoring Improving the Design of Existing Code第二章。 ref</description>
+    </item>
+    
+    <item>
+      <title>Arts Week 3</title>
+      <link>https://gigimushroom.github.io/post/arts_week3/</link>
+      <pubDate>Tue, 22 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gigimushroom.github.io/post/arts_week3/</guid>
+      <description>Algorithm https://leetcode.com/problems/find-pivot-index/ 1 2 3 4 5 6 7 8 def pivotIndex(self, nums): total = sum(nums) leftsum = 0 for i, x in enumerate(nums): if leftsum == total - x - leftsum: return i leftsum += x return -1 python enumerate是一个强大的枚举function Review: 监控系统</description>
+    </item>
+    
+    <item>
+      <title>Arts Week 2</title>
+      <link>https://gigimushroom.github.io/post/arts_week2/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gigimushroom.github.io/post/arts_week2/</guid>
+      <description>Algorithm 编程珠玑第一章 disk sort 100000个不重复电话号码, 在有限的内存空间里, 要求排序。 {% highlight python %} #!/usr/bin/env python BISTSPERWORD = 32 SHIFT = 5 MASK = ord(&#39;\x1F&#39;) N = 10000 Setting all bits to 0 a = [0 for x in range(N)]</description>
+    </item>
+    
+    <item>
+      <title>Arts Week 1</title>
+      <link>https://gigimushroom.github.io/post/arts_week1/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gigimushroom.github.io/post/arts_week1/</guid>
+      <description>Review: how browsers work 普通的tokenizer, parser对HTML不管用，因为html容错率非常高 浏览器工作原理： 1 2 3 4 5 6 7 8 tokenizer -&amp;gt; parser -&amp;gt; 生成DOM Tree</description>
+    </item>
+    
+    <item>
+      <title>ARTS的初衷</title>
+      <link>https://gigimushroom.github.io/post/arts_summary/</link>
+      <pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://gigimushroom.github.io/post/arts_summary/</guid>
+      <description>ARTS的初衷 Algorithm。主要是为了编程训练和学习。每周至少做一个 leetcode 的算法题（先从Easy开始，然后再Medium，最后才Hard）</description>
+    </item>
+    
   </channel>
 </rss>

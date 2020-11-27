@@ -71,4 +71,53 @@
     <priority>0.5</priority>
   </url>
   
+  <url>
+    <loc>https://gigimushroom.github.io/categories/arts/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gigimushroom.github.io/post/arts_week5/</loc>
+    <lastmod>2019-11-03T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gigimushroom.github.io/post/arts_week4/</loc>
+    <lastmod>2019-10-30T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gigimushroom.github.io/post/arts_week3/</loc>
+    <lastmod>2019-10-22T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gigimushroom.github.io/post/arts_week2/</loc>
+    <lastmod>2019-10-18T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gigimushroom.github.io/post/arts_week1/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://gigimushroom.github.io/post/arts_summary/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
 </urlset>

@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Mushroom&#39;s tech blog</title>
-    <link>https://gigimushroom.github.io/post/</link>
-    <description>Recent content in Posts on Mushroom&#39;s tech blog</description>
+    <title>arts on Mushroom&#39;s tech blog</title>
+    <link>https://gigimushroom.github.io/categories/arts/</link>
+    <description>Recent content in arts on Mushroom&#39;s tech blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Nov 2020 11:55:26 -0800</lastBuildDate><atom:link href="https://gigimushroom.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>https://gigimushroom.github.io/post/my-first-post/</link>
-      <pubDate>Fri, 27 Nov 2020 11:55:26 -0800</pubDate>
-      
-      <guid>https://gigimushroom.github.io/post/my-first-post/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 03 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://gigimushroom.github.io/categories/arts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arts Week 5</title>
       <link>https://gigimushroom.github.io/post/arts_week5/</link>

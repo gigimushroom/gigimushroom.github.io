@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Arts Week 2 - Mushroom&#39;s tech blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="mushroom" /><meta name="description" content="Algorithm 编程珠玑第一章 disk sort 100000个不重复电话号码, 在有限的内存空间里, 要求排序。 {% highlight python %} #!/usr/bin/env python BISTSPERWORD = 32 SHIFT = 5 MASK = ord(&#39;\x1F&#39;) N = 10000 Setting all bits to 0 a = [0 for x in range(N)]" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="https://gigimushroom.github.io/post/arts_week2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.c7bc1becf36bcf6a9ebd25d2947e43a2eb745ddb0c9a32b43126fd7fa460c351.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Arts Week 2" />
+<meta property="og:description" content="Algorithm 编程珠玑第一章 disk sort 100000个不重复电话号码, 在有限的内存空间里, 要求排序。 {% highlight python %} #!/usr/bin/env python BISTSPERWORD = 32 SHIFT = 5 MASK = ord(&#39;\x1F&#39;) N = 10000 Setting all bits to 0 a = [0 for x in range(N)]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gigimushroom.github.io/post/arts_week2/" />
+<meta property="article:published_time" content="2019-10-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-18T00:00:00+00:00" />
+<meta itemprop="name" content="Arts Week 2">
+<meta itemprop="description" content="Algorithm 编程珠玑第一章 disk sort 100000个不重复电话号码, 在有限的内存空间里, 要求排序。 {% highlight python %} #!/usr/bin/env python BISTSPERWORD = 32 SHIFT = 5 MASK = ord(&#39;\x1F&#39;) N = 10000 Setting all bits to 0 a = [0 for x in range(N)]">
+<meta itemprop="datePublished" content="2019-10-18T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-10-18T00:00:00+00:00" />
+<meta itemprop="wordCount" content="981">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Arts Week 2"/>
+<meta name="twitter:description" content="Algorithm 编程珠玑第一章 disk sort 100000个不重复电话号码, 在有限的内存空间里, 要求排序。 {% highlight python %} #!/usr/bin/env python BISTSPERWORD = 32 SHIFT = 5 MASK = ord(&#39;\x1F&#39;) N = 10000 Setting all bits to 0 a = [0 for x in range(N)]"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Mushroom Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Mushroom Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Arts Week 2</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-18 </span>
+        <div class="post-category">
+            <a href="/categories/arts/"> arts </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#algorithm">Algorithm</a></li>
+      </ul>
+    </li>
+    <li><a href="#setting-all-bits-to-0">Setting all bits to 0</a></li>
+    <li><a href="#testing">testing</a>
+      <ul>
+        <li><a href="#review">Review:</a>
+          <ul>
+            <li><a href="#how-updating-backbone-model-triggers-view-rendering">How updating Backbone Model triggers View rendering?</a></li>
+            <li><a href="#backbone-model-set">Backbone Model Set():</a></li>
+            <li><a href="#what-happened-when-you-save-a-backbone-model">What happened when you save a Backbone Model?</a></li>
+            <li><a href="#dom-events-vs-backbone-custom-events">DOM Events vs Backbone Custom Events</a></li>
+          </ul>
+        </li>
+        <li><a href="#share">Share</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="algorithm">Algorithm</h2>
+<p>编程珠玑第一章 disk sort</p>
+<p>100000个不重复电话号码, 在有限的内存空间里, 要求排序。</p>
+<p>{% highlight python %}
+#!/usr/bin/env python
+BISTSPERWORD = 32
+SHIFT = 5
+MASK = ord('\x1F')
+N = 10000</p>
+<h1 id="setting-all-bits-to-0">Setting all bits to 0</h1>
+<p>a = [0 for x in range(N)]</p>
+<p>def set(i):
+a[i&raquo;SHIFT] |=  (1&laquo;(i &amp; MASK))</p>
+<p>def clear(i):
+a[i&raquo;SHIFT] &amp;= ~(1&laquo;(i &amp; MASK))</p>
+<p>def test(i):
+return (a[i&raquo;SHIFT] &amp; (1&laquo;(i &amp; MASK))) != 0</p>
+<h1 id="testing">testing</h1>
+<p>set(12)
+set(15)</p>
+<p>#print MASK
+print test(11)
+print test(15)
+print test(88)
+print test(12)</p>
+<p>print &lsquo;10 exists: &lsquo;, test(10) # 10 not found
+set(10)
+print &lsquo;After set, 10 exists: &lsquo;, test(10) # 10 found
+{% endhighlight %}</p>
+<p>The first 3 constants are inter-related. BITSPERWORD is 32.
+This you&rsquo;d want to set based on your compiler+architecture.
+SHIFT is 5, because 2^5 = 32.</p>
+<p>Finally, MASK is 0x1F which is 11111 in binary (ie: the bottom 5 bits are all set). Equivalently, MASK =  BITSPERWORD - 1.</p>
+<p>The bitset is conceptually just an <code>array of bits</code>.</p>
+<p>This implementation actually uses an array of ints, and assumes 32 bits per int.</p>
+<p>So whenever we want to set, clear or test (read) a bit we need to figure out two things:</p>
+<ol>
+<li>which int (of the array) is it in</li>
+<li>which of that int&rsquo;s bits are we talking about</li>
+</ol>
+<p>Because we&rsquo;re assuming 32 bits per int, we can just divide by 32 (and truncate) to get the array index we want.
+Dividing by 32 (BITSPERWORD) is the same as shifting to the right by 5 (SHIFT).
+So that&rsquo;s what the <code>a[i&gt;&gt;SHIFT]</code> bit is about.</p>
+<p>You could also write this as <code>a[i/BITSPERWORD]</code>
+Now that we know which element of a we want, we need to figure out which bit.</p>
+<p>Really, we want the remainder. We could do this with <code>i%BITSPERWORD,</code> but it turns out that <code>i&amp;MASK</code> is equivalent.</p>
+<p>This is because BITSPERWORD is a power of 2 (2^5 in this case) and MASK is the bottom 5 bits all set.</p>
+<p><code>1&lt;&lt;(i &amp; MASK)</code> returns the integer that only the reminder postion is set to 1.</p>
+<p>This is the KEY, so that the <code>integer i is positioned correctly in array a</code>.</p>
+<h2 id="review">Review:</h2>
+<p>Read Backbone Source Code</p>
+<h3 id="how-updating-backbone-model-triggers-view-rendering">How updating Backbone Model triggers View rendering?</h3>
+<p>Each Backbone View is a DOM element.</p>
+<p>Backbone Model manages an internal table of data attributes, and triggers &ldquo;change&rdquo; events when any of its data is modified.</p>
+<p>The flow is:</p>
+<ol>
+<li>
+<p>Set/Update model attributes</p>
+</li>
+<li>
+<p>Set Model implementation fire ‘change’ event</p>
+</li>
+<li>
+<p>The listener catches the event, and call the callback. Example: this.render()</p>
+</li>
+<li>
+<p>render() use the template and updated model, re-generate the DOM element.</p>
+</li>
+</ol>
+<h3 id="backbone-model-set">Backbone Model Set():</h3>
+<p>Set a hash of model attributes on the object, firing <code>&quot;change&quot;</code>.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">this.trigger(&#39;change&#39;, this, options);
+</code></pre></td></tr></table>
+</div>
+</div><p>This is the core primitive operation of a model, updating the data and notifying anyone who needs to know about the change in state.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">// Triggered when a target did is added and the target is fetched.
+this.listenTo(this.model, &#39;change&#39;, this.render);
+this.listenTo(this.model, &#39;change:dids_details&#39;, this._updateCollection);
+this.listenTo(this.model, &#39;change:primary_fax&#39;, this._updateCollection);
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="list-of-built-in-backbone-events-with-arguments">List of built-in Backbone events, with arguments:</h4>
+<p><a href="https://backbonejs.org/#Events-catalog">https://backbonejs.org/#Events-catalog</a></p>
+<p>Example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&#34;add&#34; (model, collection, options) — when a model is added to a collection.
+
+&#34;remove&#34; (model, collection, options) — when a model is removed from a collection.
+
+&#34;update&#34; (collection, options) — single event triggered after any number of models have been added, removed or changed in a collection.
+
+&#34;reset&#34; (collection, options) — when the collection&#39;s entire contents have been reset.
+
+&#34;sort&#34; (collection, options) — when the collection has been re-sorted.
+
+&#34;change&#34; (model, options) — when a model&#39;s attributes have changed.
+
+&#34;change:[attribute]&#34; (model, value, options) — when a specific attribute has been updated.
+</code></pre></td></tr></table>
+</div>
+</div><p><a href="https://backbonejs.org/#View-render">https://backbonejs.org/#View-render</a></p>
+<p>The ‘change’ event callback could call render() to re-generated the DOM element.</p>
+<p>Example usage:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">this.listenTo(this.model, &#39;change&#39;, this.render);
+</code></pre></td></tr></table>
+</div>
+</div><p>render() impl:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">var Bookmark = Backbone.View.extend({
+  template: _.template(...),
+  render: function() {
+    this.$el.html(this.template(this.model.attributes));
+    return this;
+  }
+});
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="what-happened-when-you-save-a-backbone-model">What happened when you save a Backbone Model?</h3>
+<p>Ex:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">this.model.save(saveOptions, {
+      success: this._onSaved,
+      error: this._onError
+});
+</code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>
+<p>save() sends AJAX request to server.</p>
+</li>
+<li>
+<p>The option.session callback is triggered after AJAX is done:</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">options.success = function(resp) {
+  // Ensure attributes are restored during synchronous saves.
+  model.attributes = attributes;
+  var serverAttrs = model.parse(resp, options);
+  if (options.wait) serverAttrs = _.extend(attrs || {}, serverAttrs);
+  if (_.isObject(serverAttrs) &amp;&amp; !model.set(serverAttrs, options)) {
+     return false;
+  }
+  if (success) success(model, resp, options);
+  model.trigger(&#39;sync&#39;, model, resp, options);
+};
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>
+<p>model.parse() will clear all existing attributes.</p>
+</li>
+<li>
+<p>Call model.set() and pass in all current attributes from server.</p>
+</li>
+<li>
+<p>Set() checks attributes from server. If response attributes are different from it previous have, update the model’s attributes. Trigger the ‘change’ event for all changed attributes.</p>
+</li>
+</ol>
+<h3 id="dom-events-vs-backbone-custom-events">DOM Events vs Backbone Custom Events</h3>
+<p>backbone:listenTo() and Object.on(&lsquo;xx&rsquo;, function1(){}) linked with backbone trigger.</p>
+<p><a href="https://backbonejs.org/#Events-on">https://backbonejs.org/#Events-on</a></p>
+<p><code>events{} map</code> is DOM events. DOM events are registered in Jquery, so jquery dispatch it when DOM event triggers.</p>
+<p><code>Custom events</code> are done by backbone, use a list of events to maintain. Use <code>Observer pattern</code></p>
+<h2 id="share">Share</h2>
+<p>hacker and Painters - How to get wealth
+measurement and impact是得到财富的两个关键要素，大公司大团队所得的measurement也是被整除了。
+钱只是中间产物，创造财富就是满足他人的需要</p>
+<h2 id="tips">Tips</h2>
+<p>学习了mac 多桌面切换的快捷方式。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">mushroom</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-10-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/arts_week3/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Arts Week 3</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/arts_week1/">
+            <span class="next-text nav-default">Arts Week 1</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://www.linkedin.com/in/xiayingp/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+  <a href="https://gigimushroom.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019 - 
+    2020<span class="heart"><i class="iconfont icon-heart"></i></span><span>mushroom</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
