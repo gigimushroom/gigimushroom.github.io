@@ -17,9 +17,7 @@
 
 
 <meta name="author" content="mushroom" /><meta name="description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
-Share share
-How to study?
- How to understand a topic?  Understand big picture, read source code. You must write code to be fully understand it in and out. Knowing a concept and reading some articles are not enough. You need to have an implementation level of understanding. It will then live inside your brain forever and become part of your knowledge." /><meta name="keywords" content="Hugo, theme, even" />
+ Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -44,21 +42,17 @@ How to study?
 
 <meta property="og:title" content="ARTS_Week6" />
 <meta property="og:description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
-Share share
-How to study?
- How to understand a topic?  Understand big picture, read source code. You must write code to be fully understand it in and out. Knowing a concept and reading some articles are not enough. You need to have an implementation level of understanding. It will then live inside your brain forever and become part of your knowledge." />
+ Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gigimushroom.github.io/post/arts_week6/" />
 <meta property="article:published_time" content="2020-11-27T15:48:12-08:00" />
 <meta property="article:modified_time" content="2020-11-27T15:48:12-08:00" />
 <meta itemprop="name" content="ARTS_Week6">
 <meta itemprop="description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
-Share share
-How to study?
- How to understand a topic?  Understand big picture, read source code. You must write code to be fully understand it in and out. Knowing a concept and reading some articles are not enough. You need to have an implementation level of understanding. It will then live inside your brain forever and become part of your knowledge.">
+ Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc.">
 <meta itemprop="datePublished" content="2020-11-27T15:48:12-08:00" />
 <meta itemprop="dateModified" content="2020-11-27T15:48:12-08:00" />
-<meta itemprop="wordCount" content="157">
+<meta itemprop="wordCount" content="283">
 
 
 
@@ -66,9 +60,7 @@ How to study?
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ARTS_Week6"/>
 <meta name="twitter:description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
-Share share
-How to study?
- How to understand a topic?  Understand big picture, read source code. You must write code to be fully understand it in and out. Knowing a concept and reading some articles are not enough. You need to have an implementation level of understanding. It will then live inside your brain forever and become part of your knowledge."/>
+ Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -168,6 +160,20 @@ How to study?
     <div class="post-content">
       <h2 id="review">Review</h2>
 <p><a href="https://medium.com/airbnb-engineering/tracking-the-money-scaling-financial-reporting-at-airbnb-6d742b80f040">Tracking the Money — Scaling Financial Reporting at Airbnb</a></p>
+<ul>
+<li>Airbnb supports 190+ countries, with 70+ currencies and 20+ processors.</li>
+<li>Airbnb has to track money in, and money out.</li>
+<li>Lots of transactions on every single day.</li>
+<li>They re-architect their system from a MySQL-based data pipeline to event based pipeline.</li>
+<li>Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc.</li>
+</ul>
+<div class="admonition example"><p class="admonition-title">Key Takeaways</p>
+<ul>
+<li>Use <a href="https://en.wikipedia.org/wiki/Double-entry_bookkeeping">double entry accounting</a>. Double entry accounting allows us to be sure that everything is accounted for properly in the system. This means no money appears or disappears without a source.</li>
+<li>Nightly processing is too slow, comparing to event based system.</li>
+<li>decouple the financial logic from the product logic.</li>
+</ul>
+</div>
 <h2 id="share">Share</h2>
 <div class="admonition tip"><p class="admonition-title">share</p>
 <p>How to study?</p>

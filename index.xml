@@ -30,9 +30,7 @@ Projects Regular Expression Engine  Define context free grammar. Implement a LR 
       
       <guid>https://gigimushroom.github.io/post/arts_week6/</guid>
       <description>Review Tracking the Money — Scaling Financial Reporting at Airbnb
-Share share
-How to study?
- How to understand a topic?  Understand big picture, read source code. You must write code to be fully understand it in and out. Knowing a concept and reading some articles are not enough. You need to have an implementation level of understanding. It will then live inside your brain forever and become part of your knowledge.</description>
+ Airbnb supports 190+ countries, with 70+ currencies and 20+ processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc.</description>
     </item>
     
     <item>
