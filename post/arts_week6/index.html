@@ -16,8 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="mushroom" /><meta name="description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
- Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="mushroom" /><meta name="description" content="Algorithm Implement a calculator that supports Parentheses
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&amp;#39;&#43;&amp;#39;, &amp;#39;-&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;/&amp;#39;] def tokenizer(str): tokens = [] rhs = &amp;#39;&amp;#39; for i in range(len(str)): if str[i] == &amp;#39;(&amp;#39; or str[i] == &amp;#39;)&amp;#39; or str[i] in symbols: # We got left hand side, save it." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -41,26 +41,26 @@
 
 
 <meta property="og:title" content="ARTS_Week6" />
-<meta property="og:description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
- Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc." />
+<meta property="og:description" content="Algorithm Implement a calculator that supports Parentheses
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gigimushroom.github.io/post/arts_week6/" />
 <meta property="article:published_time" content="2020-11-27T15:48:12-08:00" />
 <meta property="article:modified_time" content="2020-11-27T15:48:12-08:00" />
 <meta itemprop="name" content="ARTS_Week6">
-<meta itemprop="description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
- Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc.">
+<meta itemprop="description" content="Algorithm Implement a calculator that supports Parentheses
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it.">
 <meta itemprop="datePublished" content="2020-11-27T15:48:12-08:00" />
 <meta itemprop="dateModified" content="2020-11-27T15:48:12-08:00" />
-<meta itemprop="wordCount" content="283">
+<meta itemprop="wordCount" content="648">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ARTS_Week6"/>
-<meta name="twitter:description" content="Review Tracking the Money — Scaling Financial Reporting at Airbnb
- Airbnb supports 190&#43; countries, with 70&#43; currencies and 20&#43; processors. Airbnb has to track money in, and money out. Lots of transactions on every single day. They re-architect their system from a MySQL-based data pipeline to event based pipeline. Use Apache Spark, written in Scala. They chose Scala as the language because we wanted the latest features of Spark, as well as the other benefits of the language, like types, closures, immutability, lazy evaluation, etc."/>
+<meta name="twitter:description" content="Algorithm Implement a calculator that supports Parentheses
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -145,12 +145,14 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#algorithm">Algorithm</a></li>
         <li><a href="#review">Review</a></li>
         <li><a href="#share">Share</a>
           <ul>
             <li></li>
           </ul>
         </li>
+        <li><a href="#tips">Tips</a></li>
       </ul>
     </li>
   </ul>
@@ -158,7 +160,166 @@
   </div>
 </div>
     <div class="post-content">
-      <h2 id="review">Review</h2>
+      <h2 id="algorithm">Algorithm</h2>
+<p>Implement a calculator that supports Parentheses</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">symbols = [&#39;+&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;]
+
+
+def tokenizer(str):
+    tokens = []
+    rhs = &#39;&#39;
+    for i in range(len(str)):
+        if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols:
+            # We got left hand side, save it.
+            if rhs:
+                tokens.append(rhs)
+                rhs = &#39;&#39;
+            tokens.append(str[i])
+            
+        else:
+            rhs += str[i]
+            
+    return tokens
+
+def calc(tokens):
+    lhs = tokens[0]
+    sym = tokens[1]
+    rhs = tokens[2]
+    if sym == &#39;+&#39;:
+        return int(lhs) + int(rhs)
+    elif sym == &#39;-&#39;:
+        return int(lhs) - int(rhs)
+    elif sym == &#39;*&#39;:
+        return int(lhs) * int(rhs)
+    elif sym == &#39;/&#39;:
+        return int(lhs) / int(rhs)
+    
+    return None
+
+def eval(tokens):
+    if len(tokens) == 1:
+        return tokens[0]
+    
+    return parser(tokens)
+
+def parser(tokens):
+    # Trim ().
+    tokens = tokens[1:-1]
+    
+    paren_start = False
+    for i, t in enumerate(tokens):
+        if t == &#39;(&#39;:
+            paren_start = True
+            
+        elif t == &#39;)&#39;:
+            paren_start = False
+            # We got LHS in (xxx), next symbol is +/-/*//, add these as tokens
+            symbol = tokens[i+1]
+            lhs = eval(tokens[:i+1])
+            rhs = eval(tokens[i+2:])
+            #print(lhs, symbol, rhs)
+            tks = [lhs, symbol, rhs]
+            return calc(tks)
+            
+        elif t in symbols and not paren_start:
+            symbol = t
+            lhs = eval(tokens[:i])
+            rhs = eval(tokens[i+1:])
+            tks = [lhs, symbol, rhs]
+            return calc(tks)
+            
+    return None
+            
+print(parser(tokenizer(&#39;((2+3)+5)&#39;)))
+print(parser(tokenizer(&#39;(3*(2+4))&#39;)))
+
+print(parser(tokenizer(&#39;((88-86)*(4/2))&#39;)))
+</code></pre></td></tr></table>
+</div>
+</div><p>The idea is:</p>
+<ol>
+<li>Tokenize the string to <code>22, +, 44</code></li>
+<li>Parse the tokens to: LHS, SYMBOL, RHS</li>
+<li>Divide and conquer LHS, RHS recusively</li>
+<li>Perform math calculation when see <code>token_a SYM token_b</code> (no Parentheses)</li>
+</ol>
+<h2 id="review">Review</h2>
 <p><a href="https://medium.com/airbnb-engineering/tracking-the-money-scaling-financial-reporting-at-airbnb-6d742b80f040">Tracking the Money — Scaling Financial Reporting at Airbnb</a></p>
 <ul>
 <li>Airbnb supports 190+ countries, with 70+ currencies and 20+ processors.</li>
@@ -193,7 +354,23 @@
 <li>You explain this cool thing to your friends, your wife/husband. You might find some missing pieces while answering questions from them.</li>
 <li>Lastly, you wrote your implementation to demonstrate this idea.</li>
 </ul>
-
+<h2 id="tips">Tips</h2>
+<p><a href="https://github.com/inishchith/autoenv">autoenv</a>
+If a directory contains a .env file, it will automatically be executed when you cd into it.</p>
+<p>When enabled (set AUTOENV_ENABLE_LEAVE to a non-null string), if a directory contains a .env.leave file, it will automatically be executed when you leave it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ echo &#34;echo &#39;whoa&#39;&#34; &gt; project/.env
+$ cd project
+whoa
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
