@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="mushroom" /><meta name="description" content="Algorithm Implement a calculator that supports Parentheses
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&amp;#39;&#43;&amp;#39;, &amp;#39;-&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;/&amp;#39;] def tokenizer(str): tokens = [] rhs = &amp;#39;&amp;#39; for i in range(len(str)): if str[i] == &amp;#39;(&amp;#39; or str[i] == &amp;#39;)&amp;#39; or str[i] in symbols: # We got left hand side, save it." /><meta name="keywords" content="Hugo, theme, even" />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71  symbols = [&amp;#39;&#43;&amp;#39;, &amp;#39;-&amp;#39;, &amp;#39;*&amp;#39;, &amp;#39;/&amp;#39;] def tokenizer(str): tokens = [] rhs = &amp;#39;&amp;#39; for i in range(len(str)): if str[i] == &amp;#39;(&amp;#39; or str[i] == &amp;#39;)&amp;#39; or str[i] in symbols: # We got left hand side, save it." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -42,17 +42,17 @@
 
 <meta property="og:title" content="ARTS_Week6" />
 <meta property="og:description" content="Algorithm Implement a calculator that supports Parentheses
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it." />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://gigimushroom.github.io/post/arts_week6/" />
 <meta property="article:published_time" content="2020-11-27T15:48:12-08:00" />
 <meta property="article:modified_time" content="2020-11-27T15:48:12-08:00" />
 <meta itemprop="name" content="ARTS_Week6">
 <meta itemprop="description" content="Algorithm Implement a calculator that supports Parentheses
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it.">
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it.">
 <meta itemprop="datePublished" content="2020-11-27T15:48:12-08:00" />
 <meta itemprop="dateModified" content="2020-11-27T15:48:12-08:00" />
-<meta itemprop="wordCount" content="648">
+<meta itemprop="wordCount" content="647">
 
 
 
@@ -60,7 +60,7 @@
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ARTS_Week6"/>
 <meta name="twitter:description" content="Algorithm Implement a calculator that supports Parentheses
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it."/>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71  symbols = [&#39;&#43;&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;] def tokenizer(str): tokens = [] rhs = &#39;&#39; for i in range(len(str)): if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols: # We got left hand side, save it."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -235,81 +235,79 @@
 </span><span class="lnt">69
 </span><span class="lnt">70
 </span><span class="lnt">71
-</span><span class="lnt">72
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">symbols = [&#39;+&#39;, &#39;-&#39;, &#39;*&#39;, &#39;/&#39;]
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">symbols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;/&#39;</span><span class="p">]</span>
 
-
-def tokenizer(str):
-    tokens = []
-    rhs = &#39;&#39;
-    for i in range(len(str)):
-        if str[i] == &#39;(&#39; or str[i] == &#39;)&#39; or str[i] in symbols:
-            # We got left hand side, save it.
-            if rhs:
-                tokens.append(rhs)
-                rhs = &#39;&#39;
-            tokens.append(str[i])
+<span class="k">def</span> <span class="nf">tokenizer</span><span class="p">(</span><span class="nb">str</span><span class="p">):</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">rhs</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">str</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;)&#39;</span> <span class="ow">or</span> <span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">:</span>
+            <span class="c1"># We got left hand side, save it.</span>
+            <span class="k">if</span> <span class="n">rhs</span><span class="p">:</span>
+                <span class="n">tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+                <span class="n">rhs</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="n">tokens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
             
-        else:
-            rhs += str[i]
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">rhs</span> <span class="o">+=</span> <span class="nb">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
             
-    return tokens
+    <span class="k">return</span> <span class="n">tokens</span>
 
-def calc(tokens):
-    lhs = tokens[0]
-    sym = tokens[1]
-    rhs = tokens[2]
-    if sym == &#39;+&#39;:
-        return int(lhs) + int(rhs)
-    elif sym == &#39;-&#39;:
-        return int(lhs) - int(rhs)
-    elif sym == &#39;*&#39;:
-        return int(lhs) * int(rhs)
-    elif sym == &#39;/&#39;:
-        return int(lhs) / int(rhs)
+<span class="k">def</span> <span class="nf">calc</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="n">lhs</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">sym</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">rhs</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">sym</span> <span class="o">==</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">sym</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span> <span class="o">-</span> <span class="nb">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">sym</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span> <span class="o">*</span> <span class="nb">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">sym</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">lhs</span><span class="p">)</span> <span class="o">/</span> <span class="nb">int</span><span class="p">(</span><span class="n">rhs</span><span class="p">)</span>
     
-    return None
+    <span class="k">return</span> <span class="bp">None</span>
 
-def eval(tokens):
-    if len(tokens) == 1:
-        return tokens[0]
+<span class="k">def</span> <span class="nf">eval</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     
-    return parser(tokens)
+    <span class="k">return</span> <span class="n">parser</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span>
 
-def parser(tokens):
-    # Trim ().
-    tokens = tokens[1:-1]
+<span class="k">def</span> <span class="nf">parser</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+    <span class="c1"># Trim ().</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
     
-    paren_start = False
-    for i, t in enumerate(tokens):
-        if t == &#39;(&#39;:
-            paren_start = True
+    <span class="n">paren_start</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tokens</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">t</span> <span class="o">==</span> <span class="s1">&#39;(&#39;</span><span class="p">:</span>
+            <span class="n">paren_start</span> <span class="o">=</span> <span class="bp">True</span>
             
-        elif t == &#39;)&#39;:
-            paren_start = False
-            # We got LHS in (xxx), next symbol is +/-/*//, add these as tokens
-            symbol = tokens[i+1]
-            lhs = eval(tokens[:i+1])
-            rhs = eval(tokens[i+2:])
-            #print(lhs, symbol, rhs)
-            tks = [lhs, symbol, rhs]
-            return calc(tks)
+        <span class="k">elif</span> <span class="n">t</span> <span class="o">==</span> <span class="s1">&#39;)&#39;</span><span class="p">:</span>
+            <span class="n">paren_start</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="c1"># We got LHS in (xxx), next symbol is +/-/*//, add these as tokens</span>
+            <span class="n">symbol</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">lhs</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">tokens</span><span class="p">[:</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">rhs</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">:])</span>
+            <span class="c1">#print(lhs, symbol, rhs)</span>
+            <span class="n">tks</span> <span class="o">=</span> <span class="p">[</span><span class="n">lhs</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">rhs</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">calc</span><span class="p">(</span><span class="n">tks</span><span class="p">)</span>
             
-        elif t in symbols and not paren_start:
-            symbol = t
-            lhs = eval(tokens[:i])
-            rhs = eval(tokens[i+1:])
-            tks = [lhs, symbol, rhs]
-            return calc(tks)
+        <span class="k">elif</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">symbols</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">paren_start</span><span class="p">:</span>
+            <span class="n">symbol</span> <span class="o">=</span> <span class="n">t</span>
+            <span class="n">lhs</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">tokens</span><span class="p">[:</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">rhs</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
+            <span class="n">tks</span> <span class="o">=</span> <span class="p">[</span><span class="n">lhs</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">rhs</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">calc</span><span class="p">(</span><span class="n">tks</span><span class="p">)</span>
             
-    return None
+    <span class="k">return</span> <span class="bp">None</span>
             
-print(parser(tokenizer(&#39;((2+3)+5)&#39;)))
-print(parser(tokenizer(&#39;(3*(2+4))&#39;)))
+<span class="k">print</span><span class="p">(</span><span class="n">parser</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">(</span><span class="s1">&#39;((2+3)+5)&#39;</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">parser</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">(</span><span class="s1">&#39;(3*(2+4))&#39;</span><span class="p">)))</span>
 
-print(parser(tokenizer(&#39;((88-86)*(4/2))&#39;)))
+<span class="k">print</span><span class="p">(</span><span class="n">parser</span><span class="p">(</span><span class="n">tokenizer</span><span class="p">(</span><span class="s1">&#39;((88-86)*(4/2))&#39;</span><span class="p">)))</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>The idea is:</p>
